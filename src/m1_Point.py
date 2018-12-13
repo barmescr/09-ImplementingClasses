@@ -44,6 +44,7 @@ def main():
 # to have additional side effects as needed by it and/or other methods.
 ###############################################################################
 
+import math
 
 class Point(object):
     """point in 2-space."""
@@ -72,7 +73,7 @@ class Point(object):
         return self.moves
 
     def get_distance_from(self, another_point):
-
+        return math.sqrt((self.x - another_point.x) ** 2 + (self.y - another_point.y) ** 2)
 
 def run_test_init():
     """
